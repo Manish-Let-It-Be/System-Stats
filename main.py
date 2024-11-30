@@ -1,4 +1,4 @@
-# Program without UI
+#  Program without UI
 import psutil
 
 def display_processes(order_by='cpu_desc'):
