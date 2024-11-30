@@ -21,6 +21,8 @@ This tool uses the `psutil` library to gather system information and `tkinter` t
 
 ---
 
+## Screenshot
+
 Here is the screenshot of the program:
 
 ![Homepage](UI.png)
@@ -42,7 +44,7 @@ pip install psutil
 ```
 
 ### Note:
-- **`tkinter`** is included with standard Python installations on Windows and macOS. On some Linux distributions, you may need to install it manually (see the **Installation** section below).
+- **`tkinter`** is included with standard Python installations on Windows and macOS.
 
 ---
 
@@ -53,7 +55,7 @@ pip install psutil
 You can clone this repository using Git:
 
 ```bash
-git clone https://github.com/<your-username>/system-stats.git
+git clone https://github.com/Manish-Let-It-Be/System-Stats
 cd system-stats
 ```
 
