@@ -21,8 +21,10 @@ This tool uses the `psutil` library to gather system information and `tkinter` t
 
 ---
 
-## Screenshots
+Here is the screenshot of the webpage:
 
+![Homepage](UI.png)
+**Screenshot of the homepage*
 
 ---
 
