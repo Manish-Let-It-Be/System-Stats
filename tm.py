@@ -1,5 +1,3 @@
-#Program with UI
-
 import psutil
 import tkinter as tk
 from tkinter import ttk
@@ -39,12 +37,12 @@ def update_process_table(processes):
 def on_quit():
     root.quit()
 
-# Create the main window
+# Main Window
 root = tk.Tk()
 root.title("Task Manager")
 root.geometry("600x400")
 
-# Create a Treeview for displaying processes
+# Tree view
 tree = ttk.Treeview(root, columns=("PID", "Name", "CPU%", "Memory (MB)"), show='headings')
 tree.heading("PID", text="PID")
 tree.heading("Name", text="Name")
@@ -55,31 +53,30 @@ tree.column("Name", width=200)
 tree.column("CPU%", width=80)
 tree.column("Memory (MB)", width=100)
 
-# Add a scrollbar
+# Scrollbar element
 scrollbar = ttk.Scrollbar(root, orient="vertical", command=tree.yview)
 tree.configure(yscroll=scrollbar.set)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-# Pack the Treeview
+# Packing of treeview
 tree.pack(pady=10, fill=tk.BOTH, expand=True)
 
-# Create a dropdown for sorting options
+# Dropdown
 order_var = tk.StringVar(value='CPU_Dsc')
 order_menu = ttk.Combobox(root, textvariable=order_var, values=[
     'CPU_Asc', 'CPU_Dsc', 'Memory_Asc', 'Memory_Dsc'
 ])
 order_menu.pack(pady=10)
 
-# Create a button to refresh the process list
+# Buttons
 refresh_button = tk.Button(root, text="Refresh", command=refresh_processes)
 refresh_button.pack(pady=5)
 
-# Create a button to quit the application
 quit_button = tk.Button(root, text="Quit", command=on_quit)
 quit_button.pack(pady=5)
 
-# Initial population of the process list
+# Initial population
 refresh_processes()
 
-# Start the GUI event loop
+# GUI event loop
 root.mainloop()
